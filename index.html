@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- adding the css file -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <video autoplay muted loop id="myVideo">
+      <source src="./img/Pexels Videos 1542008.mp4" type="video/mp4">
+    </video>
+    <!-- container for holding the weather card -->
+    <div class="mainContainer">
+      
+
+      <div class="navSection">
+        <div class="headingSearchCon">
+          <h1 class="appsName">Weather Now</h1>
+          <!-- section for searching the weather of a city -->
+          <form onsubmit="getData(event)" class="searchData">
+              <input id="inputBox" class="input" type="text" placeholder="Enter the city name" />
+              <button>Search</button>
+            </form>
+        </div>
+          
+        <div id="cityTempContainer">
+          <p class="citynameheading" id="cityName1" ></p>
+          <p class="citynameheading"><span id="temperature1"></span></p>
+        </div>
+      </div>
+      
+          
+        <div class="container">
+            <div>
+                <h1 class="appName">Current Weather</h1>
+
+                <!-- section for displaying the city weather data -->
+                <section class="cityWeatherData">
+                  <!-- displaying the country details -->
+                  <div class="countryDetails details">
+                    <!-- displaying the country name -->
+                    <div class="card">
+                      <p class="resultHeadings">Country </p>
+                      <p class="results" id="countryName">__</p>
+                    </div>
+          
+                    <!-- displaying the state name -->
+                    <div class="card">
+                      <p class="resultHeadings">State</p>
+                      <p class="results" id="stateName">__</p>
+                    </div>
+          
+                    <!-- displaying the city name -->
+                    <div class="card">
+                      <p class="resultHeadings">City</p>
+                      <p class="results" id="cityName2">__</p>
+                    </div>
+                  </div>
+          
+                  <!-- displaying the weather status -->
+                  <div class="weatherDetails details">
+                    <!-- displaying the humidity -->
+                    <div class="card">
+                      <p class="resultHeadings">Humidity</p>
+                      <p class="results" id="humidity">__</p>
+                    </div>
+          
+                    <!-- displaying the wind speed -->
+                    <div class="card">
+                      <p class="resultHeadings">Wind Speed</p>
+                      <p class="results"><span id="windSpeed">__</span> KMPH</p>
+                    </div>
+          
+                    <!-- displaying the current temprature in celcius -->
+                    <div class="card">
+                      <p class="resultHeadings">Temperature</p>
+                      <!-- unicode for degree celcius symbol -->
+                      <p class="results"><span id="temperature2">__</span>&#8451;</p>
+                    </div>
+          
+                    <!-- displaying the weather condition -->
+                    <div class="card">
+                      <img width="30px" id="logoImage" src="" alt="icon" />
+                      <p class="results" id="weatherStatus">__</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+    
+    
+            </div>
+          
+    </div>
+    
+    
+  </body>
+
+  <!-- adding the javascript file -->
+  <script src="./script.js"></script>
+</html>
